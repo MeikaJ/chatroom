@@ -1,5 +1,6 @@
 import React from 'react';
 import Proptypes from 'prop-types';
+import { retrieveImage } from '../firebase_chatroom';
 
 const RoomList = props => {
     const { rooms, currentRoom, connectToRoom, currentUser } = props;
@@ -8,25 +9,35 @@ const RoomList = props => {
         const isRoomActive = room.id === currentRoom.id ? 'active' : '';
 
         return (
-            <li
-                className={isRoomActive}
-                key={room.id}
-                onClick={() => connectToRoom(room.id)}
-            >
-                <span className="room-icon">{roomIcon}</span>
-                {room.customData && room.customData.isDirectMessage ? (
-                    <span className="room-name">
-                        {room.customData.userIds.filter(id => id !== currentUser.id)[0]}
-                    </span>
-                ) : (
-                        <span className="room-name">{room.name}</span>
-                    )}
-            </li>
+            <div>
+                <li
+                    className={isRoomActive}
+                    key={room.id}
+                    onClick={() => connectToRoom(room.id)}
+                >
+                    <span className="room-icon">{roomIcon}</span>
+                    {room.customData && room.customData.isDirectMessage ? (
+                        <span className="room-name">
+                            {room.customData.userIds.filter(id => id !== currentUser.id)[0]}
+                        </span>
+                    ) : (
+                            <span className="room-name">{room.name}</span>
+                        )}
+                </li>
+            </div>
         );
     });
     return (
         <div className="rooms">
             <ul className="chat-rooms">{roomList}</ul>
+
+            <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Kitty :3</button>
+
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01"/>
+                <div id="caption"></div>
+            </div>
         </div>
     );
 };
