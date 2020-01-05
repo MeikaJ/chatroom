@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAQwfU9OH_QU8K9s8VaPwbEEBaxHgv5hXI",
+    apiKey: "const API_KEY = process.env.REACT_APP_FBKEY",
     authDomain: "cats-17222.firebaseapp.com",
     databaseURL: "https://cats-17222.firebaseio.com",
     projectId: "cats-17222",
@@ -55,8 +55,8 @@ function retrieveImage(imagePath, imageElement) {
             modal.style.display = "none";
         }
     }).catch(function (error) {
-            // A full list of error codes is available at
-            // https://firebase.google.com/docs/storage/web/handle-errors
+        // A full list of error codes is available at
+        // https://firebase.google.com/docs/storage/web/handle-errors
 
         var error;
         switch (error.code) {
