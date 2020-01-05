@@ -33,7 +33,7 @@ const RoomList = props => {
             <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Renton Adoptions</button>
             <button id="mybtn" onClick={() => retrieveImage('download.jpeg', 'img01')}>Bellevue Adoptions</button>
             <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Issaquah Adoptions</button>
-            <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Calendar</button>
+
 
             <div id="myModal" class="modal">
                 <span class="close">&times;</span>
