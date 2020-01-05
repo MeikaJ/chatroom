@@ -30,12 +30,13 @@ const RoomList = props => {
     return (
         <div className="rooms">
             <ul className="chat-rooms">{roomList}</ul>
-
-            <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Kitty :3</button>
+            <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Renton Adoptions</button>
+            <button id="mybtn" onClick={() => retrieveImage('download.jpeg', 'img01')}>Bellevue Adoptions</button>
+            <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Issaquah Adoptions</button>
 
             <div id="myModal" class="modal">
                 <span class="close">&times;</span>
-                <img class="modal-content" id="img01"/>
+                <img class="modal-content" id="img01" />
                 <div id="caption"></div>
             </div>
         </div>
