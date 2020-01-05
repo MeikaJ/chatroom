@@ -26,10 +26,14 @@
 
     .right-sidebar {
       border-left: 1px solid #ccc;
+      background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     }
 
     .left-sidebar {
       border-right: 1px solid #ccc;
+      background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     }
 
     .user-profile {
@@ -49,7 +53,7 @@
 
     .user-profile .username {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 200;
     }
 
     .chat-rooms li, .room-member {
@@ -96,7 +100,7 @@
     }
 
     .presence.online {
-      background-color: green;
+      background-color: blue;
     }
 
     .chat-rooms .active {
@@ -105,7 +109,7 @@
     }
 
     .chat-rooms li:hover {
-      background-color: #D8D1D1;
+      background-color: yellow;
     }
 
     .room-icon {
@@ -128,6 +132,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     }
 
     .chat-header h3 {
