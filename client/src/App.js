@@ -88,7 +88,7 @@ class App extends Component {
                 value={newMessage}
                 name="newMessage"
                 className="message-input"
-                placeholder="Type your message and hit ENTER to send"
+                placeholder="Say HI"
                 onChange={this.handleInput}
               />
             </form>

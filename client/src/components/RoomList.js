@@ -7,7 +7,7 @@ const RoomList = props => {
     const roomList = rooms.map(room => {
 
         // labels individiual rooms and chats with emoticons
-        const roomIcon = !room.isPrivate ? '😸' : '🔒';
+        const roomIcon = !room.isPrivate ? '😸' : '🔒';
         // if room id equals active room show as active
         const isRoomActive = room.id === currentRoom.id ? 'active' : '';
 
