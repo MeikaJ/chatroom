@@ -3,7 +3,13 @@
 // import dayGridPlugin from '@fullcalendar/daygrid'
 // import './main.scss'
 
-// export default class DemoApp extends React.Component {
+
+
+//  this was supposed to be another component rendering an interactive calendar.
+
+
+
+// export default class Scheduler extends React.Component {
 
 //     render() {
 //         return (

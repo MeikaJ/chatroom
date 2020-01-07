@@ -1,16 +1,20 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 
+
+// maps throught the lists of users
 const RoomUsers = props => {
     const { roomUsers, sendDM, currentUser } = props;
     const users = roomUsers.map(user => {
         return (
             <li className="room-member" key={user.id}>
                 <div>
+                    {/* shows rather or not the user presencce is actice or not */}
                     <span className={`presence ${user.presence.state}`} />
                     <span>{user.name}</span>
                 </div>
                 {currentUser.id !== user.id ? (
+                    // button to send _____ a Dm
                     <button
                         onClick={() => sendDM(user.id)}
                         title={`Send ${user.name} a direct message`}

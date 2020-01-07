@@ -11,6 +11,7 @@ import RoomList from './components/RoomList';
 import ChatSession from './components/ChatSession';
 import RoomUsers from './components/RoomUsers';
 
+// styling 
 import 'skeleton-css/css/normalize.css';
 import 'skeleton-css/css/skeleton.css';
 import './App.css';
@@ -31,6 +32,9 @@ class App extends Component {
       messages: [],
       newMessage: '',
     };
+
+    // class methods are not binded by default in JS
+    // if not binded these will be "undefinded"
 
     this.handleInput = handleInput.bind(this);
     this.connectToChatkit = connectToChatkit.bind(this);

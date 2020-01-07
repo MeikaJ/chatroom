@@ -5,7 +5,10 @@ import { retrieveImage } from '../firebase_chatroom';
 const RoomList = props => {
     const { rooms, currentRoom, connectToRoom, currentUser } = props;
     const roomList = rooms.map(room => {
+
+        // labels individiual rooms and chats with emoticons
         const roomIcon = !room.isPrivate ? '😸' : '🔒';
+        // if room id equals active room show as active
         const isRoomActive = room.id === currentRoom.id ? 'active' : '';
 
         return (
@@ -30,6 +33,7 @@ const RoomList = props => {
     return (
         <div className="rooms">
             <ul className="chat-rooms">{roomList}</ul>
+            {/* retrieve images from firebase on click */}
             <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Renton Adoptions</button>
             <button id="mybtn" onClick={() => retrieveImage('download.jpeg', 'img01')}>Bellevue Adoptions</button>
             <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Issaquah Adoptions</button>
