@@ -6,19 +6,28 @@ const cors = require('cors');
 const Chatkit = require('@pusher/chatkit-server');
 
 const app = express();
-
+// this doesnt need to be hidden
 const chatkit = new Chatkit.default({
     instanceLocator: 'v1:us1:d0438195-980b-44ab-aa30-0adc46c40b14',
     key: 'a7a36f47-1532-4607-9098-b127ba02a7c6:KMtrxsdd8GTpyJyC7axygSfb0Zv0yWmZNa5HgDeXhgM='
 });
 
+
+// express middleware
 app.use(cors());
+
+// JSON returned 
 app.use(bodyParser.json());
+
+// Returns middleware that only parses urlencoded within certain mb's
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+// post routes #4
+// sends userid to the req.body
 app.post('/users', (req, res) => {
     const { userId } = req.body;
-
+    // sends information to chatkit
     chatkit
         .createUser({
             id: userId,
