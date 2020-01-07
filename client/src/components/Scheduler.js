@@ -11,6 +11,14 @@
 
 // export default class Scheduler extends React.Component {
 
+
+//     calendarComponentRef = React.createRef()
+//     state = {
+//         calendarWeekends: true,
+//         calendarEvents: [
+//             { title: 'testing1', start: new Date() }
+//         ]
+//     }
 //     render() {
 //         return (
 //             <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
