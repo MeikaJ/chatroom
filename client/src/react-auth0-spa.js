@@ -1,5 +1,8 @@
 // src/react-auth0-spa.js
 import React, { useState, useEffect, useContext } from "react";
+
+
+
 import createAuth0Client from "@auth0/auth0-spa-js";
 
 const DEFAULT_REDIRECT_CALLBACK = () =>
@@ -57,6 +60,7 @@ export const Auth0Provider = ({
         setIsAuthenticated(true);
     };
 
+    // csrf defense 
     const handleRedirectCallback = async () => {
         setLoading(true);
         await auth0Client.handleRedirectCallback();
@@ -75,8 +79,11 @@ export const Auth0Provider = ({
                 loginWithPopup,
                 handleRedirectCallback,
                 getIdTokenClaims: (...p) => auth0Client.getIdTokenClaims(...p),
+                // temp token is given here with user data
                 loginWithRedirect: (...p) => auth0Client.loginWithRedirect(...p),
+                // token is recieved from the server and stored in storage
                 getTokenSilently: (...p) => auth0Client.getTokenSilently(...p),
+                // verifies the token for authenticity 
                 getTokenWithPopup: (...p) => auth0Client.getTokenWithPopup(...p),
                 logout: (...p) => auth0Client.logout(...p)
             }}

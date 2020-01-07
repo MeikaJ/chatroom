@@ -39,6 +39,7 @@ const RoomList = props => {
             <button id="mybtn" onClick={() => retrieveImage('photo-1482066490729-6f26115b60dc.jpeg', 'img01')}>Issaquah Adoptions</button>
 
 
+
             <div id="myModal" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="img01" />

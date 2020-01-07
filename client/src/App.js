@@ -110,6 +110,7 @@ class App extends Component {
             connectToChatkit={this.connectToChatkit}
           />
         ) : null}
+
       </div>
     );
   }
