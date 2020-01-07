@@ -1,5 +1,9 @@
 import React from 'react';
+
+// runs typechecking on components to make sure its valid
 import Proptypes from 'prop-types';
+
+// javascript dates library 
 import { format } from 'date-fns';
 
 const ChatSession = props => {
