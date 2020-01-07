@@ -1,6 +1,6 @@
 import React from 'react';
 import Proptypes from 'prop-types';
-
+// auth0
 import { useAuth0 } from "../react-auth0-spa";
 
 const Dialog = props => {
@@ -12,10 +12,14 @@ const Dialog = props => {
             <div className="dialog">
                 {!isAuthenticated && (
                     <form className="dialog-form" autoFocus>
+                        {/* autofocus on the login pop up */}
                         <button autoFocus onClick={loginWithRedirect}>Login</button>
                     </form>
                 )}
-
+                {/* requires user is authenticated and assigned a "name" before connecting to chatkit
+                
+                
+                stops people from being able to bypass the log in screen*/}
                 {isAuthenticated && user != null && (
                     <form className="dialog-form" autoFocus onFocus={handleInput} onSubmit={connectToChatkit}>
                         <label className="username-label" htmlFor="username">

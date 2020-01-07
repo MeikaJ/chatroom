@@ -8,6 +8,7 @@ import { format } from 'date-fns';
 
 const ChatSession = props => {
     const { messages } = props;
+    // maps through the messages and adds the latest ones with time stamp
     return messages.map(message => {
         const time = format(new Date(`${message.updatedAt}`), 'HH:mm');
 
@@ -23,6 +24,8 @@ const ChatSession = props => {
     });
 };
 
+
+// this requires that an array is indeed returned
 ChatSession.propTypes = {
     messages: Proptypes.arrayOf(Proptypes.object).isRequired,
 };
