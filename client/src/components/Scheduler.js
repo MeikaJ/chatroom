@@ -5,20 +5,12 @@
 
 
 
-//  this was supposed to be another component rendering an interactive calendar.
+//  this was supposed to be another component that would eventually render an interactive calendar.
 
 
 
 // export default class Scheduler extends React.Component {
 
-
-//     calendarComponentRef = React.createRef()
-//     state = {
-//         calendarWeekends: true,
-//         calendarEvents: [
-//             { title: 'testing1', start: new Date() }
-//         ]
-//     }
 //     render() {
 //         return (
 //             <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
